@@ -2,48 +2,39 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 module.exports = {
-    entry: './src/js/index.js',
+    entry: './src/sass/main.scss',
     output: {
-        filename: 'Finalfile.js',
+        filename: 'dummy.js', 
         path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
-      static: './dist',
+        static: './dist',
+        open: true, // Abre automáticamente el navegador
     },
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader
-                    },
-                    'css-loader'
-                ]
-            }
-        ]
-    },
+    mode: 'development',
     module: {
         rules: [
             {
                 test: /\.(c|sc|sa)ss$/,
                 use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader
-                    },
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'sass-loader'
-                ]
-            }
-        ]
+                    'sass-loader',
+                ],
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+        ],
     },
     plugins: [
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'style.css',
+        }),
         new HtmlWebpackPlugin({
-            title: 'Prueba',
-            template: './src/index.html'
-        })
-    ]
-}
+            template: './src/index.html', // Tu plantilla HTML
+        }),
+    ],
+};
