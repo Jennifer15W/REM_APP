@@ -10,7 +10,7 @@ module.exports = {
     },
     devServer: {
         static: './dist',
-        open: true, // Abre automáticamente el navegador
+        open: true, 
     },
     mode: 'development',
     module: {
@@ -34,7 +34,7 @@ module.exports = {
             filename: 'style.css',
         }),
         new HtmlWebpackPlugin({
-            template: './src/index.html', // Tu plantilla HTML
+            template: './src/index.html',
         }),
     ],
 };

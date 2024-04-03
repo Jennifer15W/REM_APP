@@ -3,19 +3,21 @@ $color-text-input: white;
 $background-color-empty: #A5A5A5;
 $background-color-filled: #FFF6C9;
 $border-color: #0075FF;
+$background-input-information: #F0F4F9; 
 
 .input-container input {
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-weight: 100;
+  font-weight: 450;
   line-height: inherit;
   color: $color-text;
   min-width: 16px;
+  padding: 10px;
   border-radius: 15px;
   border-color: $border-color;
-  padding: 10px;
   outline: none;
   transition: background-color 0.3s; 
   background-color: $background-color-empty; 
+  
   &:not(:placeholder-shown) {
     background-color: $background-color-filled; 
   }
@@ -26,4 +28,24 @@ $border-color: #0075FF;
 
 ::placeholder {
   color: $color-text-input;
+}
+
+.input-container-gray input{
+  background-color: $background-input-information; 
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: 450;
+  line-height: inherit;
+  color: $color-text;
+  min-width: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+
+  &:not(:placeholder-shown) {
+    background-color: $background-color-filled; 
+  }
+  &:focus {
+    background-color: $background-color-filled;
+  }
 }
