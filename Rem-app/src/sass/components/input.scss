@@ -52,8 +52,47 @@ $text-gray-dark: #3F4E60;
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////* Search *////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////* input size *////////////////////////////////////////////////////////////////////////////////////////
+.input-container-gray-large input{
+  background-color: $background-input-information; 
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: 450;
+  line-height: inherit;
+  color: $color-text;
+  width: 20%;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
 
+  &:not(:placeholder-shown) {
+    background-color: $background-color-filled; 
+  }
+  &:focus {
+    background-color: $background-color-filled;
+  }
+}
+
+.input-container-small input{
+  background-color: $background-input-information; 
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: 450;
+  line-height: inherit;
+  color: $color-text;
+  width: 75px;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+
+  &:not(:placeholder-shown) {
+    background-color: $background-color-filled; 
+  }
+  &:focus {
+    background-color: $background-color-filled;
+  }
+}
+///////////////////////////////////////////////////////////////////////////////////////* Search *////////////////////////////////////////////////////////////////////////////////////////
 .input-search input {
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
   font-weight: 450;
@@ -86,7 +125,6 @@ $text-gray-dark: #3F4E60;
   object-fit: cover;
 }
 
-
 .input-search {
   position: relative; 
   display: inline-block; 
@@ -113,11 +151,11 @@ $text-gray-dark: #3F4E60;
     }
   }
 
-  img {
+  svg {
     position: absolute; 
     right: -30px; 
     top: 50%; 
-    transform: translateY(-50%); // Alinea precisamente en el centro
+    transform: translateY(-50%); 
     width: 20px;
     height: 20px;
   }
