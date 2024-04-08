@@ -33,18 +33,19 @@ $color-select: #ffffff;
     color: black;
 }
 
+
 ////////////////////////////////////////////////////////////////////////////////////////*Nav bar tab *////////////////////////////////////////////////////////////////////////////////////////
 
-
-*{
+* {
     font-family: 'Work Sans', sans-serif;
-  }
-  html, body{
+}
+
+html, body {
     height: 100%;
     color: #1a1b1c;
-  }
-  
-  label, a{
+}
+
+label.nav, a {
     cursor: pointer;
     user-select: none;
     text-decoration: none;
@@ -53,34 +54,34 @@ $color-select: #ffffff;
     transition: border 0.2s;
     border-bottom: 5px solid rgba($color-green-light, 0.2);
     padding: 3px 2px;
-    &:hover{
-      border-bottom-color: $color-green-light;
+    &:hover {
+        border-bottom-color: $color-green-light;
     }
-  }
-  
-  .layout{
+}
+
+.layout {
     display: grid;
     height: 100%;
     width: 100%;
     overflow: hidden;
     grid-template-rows: 50px 1fr;
     grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
-  }
+}
 
-  .layoutsecundary{
+.layoutsecundary {
     display: grid;
     height: 100%;
     width: 100%;
     overflow: hidden;
     grid-template-rows: 50px 1fr;
     grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-  }
-  
-  input[type="radio"]{
+}
+
+input[type="radio"] {
     display: none;
-  }
-  
-  label.nav{
+}
+
+label.nav {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,65 +91,65 @@ $color-select: #ffffff;
     user-select: none;
     transition: background 0.4s, padding-left 0.2s;
     padding-left: 0;
-    input[type="radio"]:checked + .page + &{
-      background: $color-green-light;
-      color: $color-select;
-      padding-left: 20px;
-      span{
-        padding-left: 20px  
-      }
-      svg{
-        opacity: 1;
-      }
+    input[type="radio"]:checked + .page + & {
+        background: $color-green-light;
+        color: $color-select;
+        padding-left: 20px;
+        span {
+            padding-left: 20px
+        }
+        svg {
+            opacity: 1;
+        }
     }
-    span{
-      padding-left: 0px;
-      position: relative;
+    span {
+        padding-left: 0px;
+        position: relative;
     }
-    svg{
-      left: 0;
-      top: -3px;
-      position: absolute;
-      width: 15px;
-      opacity: 0;
-      transition: opacity 0.2s;
+    svg {
+        left: 0;
+        top: -3px;
+        position: absolute;
+        width: 15px;
+        opacity: 0;
+        transition: opacity 0.2s;
     }
-  }
-  
-  .page{
+}
+
+.page {
     grid-column-start: 1;
     grid-row-start: 2;
     grid-column-end: span 3;
     padding: 0px 20px;
     display: flex;
     align-items: center;
-  }
-  
-  .page-contents > *{
+}
+
+.page-contents > * {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.2s, transform 0.2s;
-    @for $c from 1 through 20{
-      &:nth-child(#{$c}){
-        transition-delay: 0.2s + ($c * 0.2s);
-      }
+    @for $c from 1 through 20 {
+        &:nth-child(#{$c}) {
+            transition-delay: 0.2s + ($c * 0.2s);
+        }
     }
-  }
-  
-  input[type="radio"] + .page{
+}
+
+input[type="radio"] + .page {
     transition: transform 0.2s;
     transform: translateX(100%);
-  }
-  
-  input[type="radio"]:checked + .page{
+}
+
+input[type="radio"]:checked + .page {
     transform: translateX(0%);
-    .page-contents > *{
-      opacity: 1;
-      transform: translateY(0px);
+    .page-contents > * {
+        opacity: 1;
+        transform: translateY(0px);
     }
-  }
-  
-  .page-contents{
+}
+
+.page-contents {
     max-width: 100%;
     width: 500px;
     margin: 0 auto;

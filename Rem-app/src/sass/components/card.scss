@@ -1,0 +1,60 @@
+$color-init-card: #FFFFFF;
+$color-notification: #EFF0F3;
+$color-text-notification: #5A5959;
+
+////////////////////////////////////////////////////////////////////////////////////////*** Card ***////////////////////////////////////////////////////////////////////////////////////////
+
+.card.bg-primary.text-white.text-center.p-4.border-0.two {
+    background-color: $color-notification;
+    background-position: 50% 50% !important;
+    background-size: 50% !important;
+}
+
+.card-link {
+    letter-spacing: 0.0178571em;
+    font-weight: 500;
+}
+
+.card {
+    position: relative;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid #00000020;
+    border-radius: 0.8rem;
+    height: 12%;
+    width: 20%;
+}
+
+.card-footer,
+.card-img {
+    border-bottom-right-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+
+}
+
+blockquote.blockquote.mb-0 {
+    color: $color-text-notification;
+    font-size: 13px;
+    font-family: Roboto;
+    text-align: left;
+    line-height: 0.9;
+    padding: 10px 20px;
+    text-shadow: 0 0.025em #000;
+    border-radius: 6px;
+    border: 1.25px outset rgba(255, 255, 255, 0.3);
+    margin-left: 40px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    background-image: linear-gradient(45deg, hsla(0, 0%, 94.1%, 0) 20%, hsla(0, 0%, 94.1%, 0.12));
+    box-shadow: inset 7px 7px 0 -6px hsla(0, 0%, 94%, 0.12), inset -1px 1px 4px -1px hsla(0, 0%, 94%, 0.6);
+    backdrop-filter: blur(8px);
+    font-weight: 400;
+}
+
+.card .card-label {
+    display: flex;
+    margin-bottom: 0rem;
+    color: $color-text-notification;
+}
+
