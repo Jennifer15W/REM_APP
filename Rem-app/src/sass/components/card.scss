@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=swap');
+
 $color-init-card: #FFFFFF;
 $color-notification: #EFF0F3;
 $color-text-notification: #5A5959;
+$color-circle1: #71CE7A;
+$color-circle2: #7171CE;
+$color-circle3: #E76F51;
+$color-circle4: #51A3E7;
+$color-circle5: #247C9A;
 
 ////////////////////////////////////////////////////////////////////////////////////////*** Card ***////////////////////////////////////////////////////////////////////////////////////////
 
@@ -24,37 +31,83 @@ $color-text-notification: #5A5959;
     border-radius: 0.8rem;
     height: 12%;
     width: 20%;
+
+    &.bg-primary.text-white.text-center.p-4.border-0.two {
+        background-color: $color-notification;
+        background-position: 50% 50% !important;
+        background-size: 50% !important;
+    }
+
+    .card-footer,
+    .card-img {
+        border-bottom-right-radius: 0.8rem;
+        border-bottom-left-radius: 0.8rem;
+    }
+
+    blockquote.blockquote.mb-0 {
+        color: $color-text-notification;
+        font-size: 13px;
+        font-family: 'Work Sans', sans-serif; // Importada desde Google Fonts
+        text-align: left;
+        line-height: 0.9;
+        padding: 10px 20px;
+        text-shadow: 0 0.025em #000;
+        border-radius: 6px;
+        border: 1.25px outset rgba(255, 255, 255, 0.3);
+        margin-left: 40px;
+        margin-right: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        background-image: linear-gradient(45deg, hsla(0, 0%, 94.1%, 0) 20%, hsla(0, 0%, 94.1%, 0.12));
+        box-shadow: inset 7px 7px 0 -6px hsla(0, 0%, 94%, 0.12), inset -1px 1px 4px -1px hsla(0, 0%, 94%, 0.6);
+        backdrop-filter: blur(8px);
+        font-weight: 400;
+    }
+
+    .card-label {
+        display: flex;
+        margin-bottom: 0rem;
+        color: $color-text-notification;
+    }
 }
 
-.card-footer,
-.card-img {
-    border-bottom-right-radius: 0.8rem;
-    border-bottom-left-radius: 0.8rem;
+////////////////////////////////////////////////////////////////////////////////////////***card notification
 
+.card2.bg-primary.text-white.text-center.p-4.border-0.two {
+    background-color: $color-notification;
+    background-position: 50% 50% !important;
+    background-size: 50% !important;
 }
 
-blockquote.blockquote.mb-0 {
-    color: $color-text-notification;
-    font-size: 13px;
-    font-family: Roboto;
-    text-align: left;
-    line-height: 0.9;
-    padding: 10px 20px;
-    text-shadow: 0 0.025em #000;
-    border-radius: 6px;
-    border: 1.25px outset rgba(255, 255, 255, 0.3);
-    margin-left: 40px;
-    margin-right: 10px;
-    background-color: rgba(0, 0, 0, 0.05);
-    background-image: linear-gradient(45deg, hsla(0, 0%, 94.1%, 0) 20%, hsla(0, 0%, 94.1%, 0.12));
-    box-shadow: inset 7px 7px 0 -6px hsla(0, 0%, 94%, 0.12), inset -1px 1px 4px -1px hsla(0, 0%, 94%, 0.6);
-    backdrop-filter: blur(8px);
-    font-weight: 400;
+
+.card2 {
+    position: relative;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid #00000020;
+    border-radius: 0.8rem;
+    height: 9%;
+    width: 20%;
+
+    blockquote.blockquote1.mb-0 {
+        color: $color-text-notification;
+        font-size: 14px;
+        font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+        text-align: left;
+        line-height: 0.9;
+        padding: 10px 20px;
+        text-shadow: 0 0.025em #000;
+        border-radius: 6px;
+        border: 1.25px outset rgba(255, 255, 255, 0.3);
+        margin-left: 40px;
+        margin-right: 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        background-image: linear-gradient(45deg, hsla(0, 0%, 94.1%, 0) 20%, hsla(0, 0%, 94.1%, 0.12));
+        box-shadow: inset 7px 7px 0 -6px hsla(0, 0%, 94%, 0.12), inset -1px 1px 4px -1px hsla(0, 0%, 94%, 0.6);
+        backdrop-filter: blur(8px);
+        font-weight: 400;
+    }
+    
 }
 
-.card .card-label {
-    display: flex;
-    margin-bottom: 0rem;
-    color: $color-text-notification;
-}
 
